@@ -1,0 +1,36 @@
+@import "./base";
+
+.wrapper {
+    //height: 15rem;
+    width: 30rem;
+    font-size: 1rem;
+}
+
+.calendar-wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+
+    padding: 1em;
+}
+
+.calendar__day,
+.calendar__date {
+    text-align: center;
+}
+
+.calendar__day {
+    font-size: 0.81em;
+    text-transform: uppercase;
+    color: theme-color-level("dark", -9);
+    padding: 0.25em 0.5em;
+    margin-bottom: 1em;
+
+}
+.calendar__date {
+    padding: 0.25em 0.5em;
+
+    &--outOfMonth {
+        color: theme-color-level("dark", -9);
+    }
+}

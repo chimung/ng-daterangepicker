@@ -1,0 +1,13 @@
+<div class="wrapper shadow">
+    <div class="month-selector">
+        <img src="/assets/images/chevron-left.png" alt="previous">
+        <img src="/assets/images/chevron-right.png" alt="next">
+        <span>{{ currentMonthDisplay }}</span>
+    </div>
+    <div class="calendar-wrapper">
+        <div class="calendar-item calendar__day" *ngFor="let item of listDay">{{ item }}</div>
+        <div class="calendar-item calendar__date" [class.calendar__date--outOfMonth]="!day.isInMonth" *ngFor="let day of listDate">
+            <span>{{ day.dayDisplay }}</span>
+        </div>
+    </div>
+</div>
